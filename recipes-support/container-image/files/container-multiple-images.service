@@ -1,0 +1,15 @@
+[Unit]
+Description=Load and start multiple container images at boot with docker-compose
+After=docker.service mount-noauto.service
+Requires=docker.service docker.socket mount-noauto.service
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStartPre=/usr/bin/container-load start
+ExecStart=/usr/bin/container-multiple-images start
+ExecStop=/usr/bin/container-multiple-images stop
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

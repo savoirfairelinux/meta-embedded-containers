@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount noauto filesystems
+After=local-fs.target
+Before=docker.service
+Requires=local-fs.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/mount-noauto start
+
+[Install]
+WantedBy=multi-user.target

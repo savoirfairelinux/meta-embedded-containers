@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+    myservice:
+        image: localhost/busybox_container:latest
+    myredisservice:
+        image: localhost/redis_container:latest
+    myhttpdservice:
+        image: localhost/httpd_container:latest

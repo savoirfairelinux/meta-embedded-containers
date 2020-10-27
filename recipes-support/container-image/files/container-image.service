@@ -1,0 +1,14 @@
+[Unit]
+Description=Load and start container image at boot
+After=mount-noauto.service docker.service
+Requires=mount-noauto.service docker.service
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+ExecStart=/usr/bin/container-image start
+ExecStop=/usr/bin/container-image stop
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
