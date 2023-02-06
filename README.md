@@ -1,5 +1,19 @@
 # Meta-embedded-containers layer
 
+## Non-maintenance notice
+
+This layer was provided as proof-of-concept code to support a series
+of articles and a talk given in 2020, and is not actively maintained.
+
+Articles:
+* [Containers on Linux embedded systems](https://blog.savoirfairelinux.com/en-ca/2020/containers-on-linux-embedded-systems/)
+* [Embed a container image into a Yocto rootfs](https://blog.savoirfairelinux.com/en-ca/2020/how-to-embed-a-docker-image-into-yoctos-root-filesystem/)
+
+Videos:
+* Integrating Docker containers in Yocto - Yocto Project Virtual
+  Summit Europe, October 2020. [link to video](https://www.youtube.com/watch?v=rrYnYJ8LxWM)
+
+
 ## Description
 
 The meta-embedded-containers provides two approaches to embed Docker
@@ -25,7 +39,7 @@ Please run the following command:
 $ bitbake-layers add-layer meta-embedded-containers
 
 ## Documentation
-
+)
 Three blog papers discuss about embedding a container image(s) inside
 Yocto root filesystem.
 
